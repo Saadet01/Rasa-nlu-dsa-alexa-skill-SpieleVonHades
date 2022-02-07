@@ -1,0 +1,158 @@
+version: "3.0"
+
+nlu:
+
+- intent: LaunchRequest
+  examples: |
+    - hallo
+    - hi
+
+- intent: StoreName
+  examples: |
+    - einen Account anlegen
+    - Account anlegen
+    - einen neuen Account anlegen
+    - Spielername speichern
+    - einen Spielernamen speichern
+    - ich heiße Test
+    - Spielername ist Test
+    - mein Nickname ist Test
+    - der Name ist Test
+    - der Spielername ist Test
+    - speichere meinen namen Test
+    - speichere den namen Test
+    - speichere name Test
+
+- intent: IntroductionIntent
+  examples: |
+    - Einführung
+    - Einführung in das Spiel
+
+- intent: StartTheGameIntent
+  examples: |
+    - Spielstart
+    - Spiel starten
+    - das Spiel starten
+    - los gehts
+    - starte das Spiel
+
+- intent: FlashlightInThePocketIntent
+  examples: |
+    - in die Kleidung schauen
+    - in den Kleidung schauen
+    - meine Kleidung absuchen
+    - Kleiung abchecken
+    - Habe ich etwas in meiner Kleiung
+    - was ist in der Kleiung
+    - Was habe ich in meiner Kleiung
+    - Untersuche meine Kleiung
+    - Schaue in die Kleiung
+    
+
+- intent: LightOnIntent
+  examples: |
+    - das Licht anschalten
+    - Ich versuche die Taschenlampe anzuschalten
+    - Ich versuche das Licht anzuschalten
+    - Ich schalte das Licht an
+    - Ich versuche das Licht anzumachen
+    - Anschalten
+    - Mach das Licht an
+    - Ich schalte die Taschenlampe an
+    - Licht an
+   
+- intent: InspectItemIntent
+  examples: |
+    - gehe zum {gameItem}
+    - betrachte die {gameItem}
+    - gehe zur {gameItem}
+    - analysiere den {gameItem}
+    - analysiere die {gameItem}
+    - inspiziere die gameItem
+
+- intent: SwitchSolutionIntent
+  examples: |
+    - die Schalter betätigen
+    - den Schalter betätigen
+    - Betätige den Schalter
+
+- intent: OpenTheDoorIntent
+  examples: |
+    - Ich gebe den Code ein
+    - Ich gebe das Passwort ein
+    - Ich will das Passwort eingeben
+    - Ich möchte den Code eingeben
+    - das Passwort eingeben
+    - Öffne die Tür
+    - Den Code für die Tür eingeben
+    - der Code für die Tür ist 000000
+    - der Code ist 000000
+    - Das Passwort für die Tür lautet 000000
+    - Das Passwort lautet 000000
+
+- intent: PlayerInnerVoiceIntent
+  examples: |
+    - Ich wähle männlich
+    - Ich nehme männlich
+    - männlich
+    - Mein Geschlecht ist männlich
+    - Ich bin männlich
+    - Ich wähle das Geschlecht männlich aus
+
+
+- intent: RemainingTimeIntent
+  examples: |
+    - wie lange habe ich noch übrig
+    - wie viele Minuten habe ich noch?
+    - wie viel zeit habe ich noch
+    - wie lange spiele ich schon
+    - seit wann spiele ich schon
+    - Wie viele Minuten sind vergangen
+    - wie viel zeit ist noch übrig
+    - Wie viele Minuten sind noch übrig
+    - Wie lange habe ich noch
+
+
+- intent: CancelIntent
+  examples: |
+    - abbrechen
+    - abbruch
+    - vergiss es
+
+- intent: HelpIntent
+  examples: |
+    - hilfe
+    - hilf mir
+    - kannst du mir helfen?
+   
+
+- intent: StopIntent
+  examples: |
+    - stop
+    - hör endlich auf
+    - aufhören
+  
+- intent: PauseIntent
+  examples: |
+    - Pause
+    - unterbrechung
+    - pausieren
+    - Pausiere das Spiel
+  
+
+- intent: ContinueTheGameIntent
+  examples: |
+    - Mit dem Spiel fortfahren
+    - Weiterspielen
+    - das Spiel fortsetzen
+    - fortsetzen
+    - mach weiter
+    - Spiel fortsetzen
+    - Fortfahren
+
+
+- synonym: Kleidung
+  examples: |
+    - Hose
+    - Hosentasche
+    - Jacke

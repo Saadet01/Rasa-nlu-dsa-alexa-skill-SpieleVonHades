@@ -1,0 +1,16 @@
+version: "3.0"
+
+stories:
+
+- story: Beginner-Introduction Path
+  steps:
+  - intent: LaunchRequest
+  - action: utter_welcome
+  - intent: IntroductionIntent
+  - action: utter_IntroductionIntent
+  - intent: StoreName
+  - action: utter_StoreName
+  - intent: PlayerInnerVoiceIntent
+  - action: utter_PlayerInnerVoiceIntent
+ 
+

@@ -1,0 +1,150 @@
+version: "3.0"
+
+intents:
+  - LaunchRequest
+  - StoreName
+  - IntroductionIntent
+  - StartTheGameIntent
+  - FlashlightInThePocketIntent
+  - LightOnIntent
+  - PositionItemsIntent
+  - InspectItemIntent
+  - SwitchSolutionIntent
+  - OpenTheDoorIntent
+  - PlayerInnerVoiceIntent
+  - RemainingTimeIntent
+  - GiveMeHintIntent
+  - CancelIntent
+  - HelpIntent
+  - StopIntent
+  - ResumeIntent
+  - PauseIntent
+
+responses:
+
+  utter_welcome:
+  - text: "Willkommen in das Spiel Escape Room - Spiele von Hades. Falls du dir die Einleitung anhören möchtest, sage einfach: Einführung in das Spiel! Falls du einen Spielstand laden möchtest, sage 
+        einfach: Spielstand laden"
+
+
+  utter_StoreName:
+  - text: "Der Name wurde gespeichert. Wähle ein Geschlecht aus, in das du hineinschlüpfen möchtest. 
+            Du hast weiblich und männlich zur Auswahl"
+
+  utter_IntroductionIntent:
+  - text: "Ziel des Spiels ist es im gegebenen Zeitraum aus dem Raum zu Entkommen. Der Spielename und der Stand werden gespeichert. 
+                     Um deinen Namen zu speichern sage einfach: Der Spielername ist und deinen Namen"
+
+  utter_StartTheGameIntent_beginner:
+  - text: "Es ist dunkel, es wäre gut wenn ich etwas sehen könnte"
+
+  utter_StartTheGameIntent_advanced:
+  - text: "Wow. Du bist ja ein Fortgeschrittener! Falls du vom letzten Stand weiterspielen willst, 
+            sage: Spiel fortsetzen. Du kannst den Spielstand auf Null setzen oder einen komplett 
+            neuen Account anlegen. Wie möchtest du fortfahren?"
+
+  utter_FlashlightInThePocketIntent:
+  - text: "Eine Taschenlampe! Gott sei Dank!"
+
+  utter_LightOnIntent:
+  - text: "So! Jetzt sehe ich alles. Was ist das? Das Bild? Die Initialen von Hades?"
+
+  utter_LightOnIntent_failed:
+  - text: "Es hat nicht geklappt. Ich muss zuerst eine Lichtquelle finden."
+
+ 
+  utter_InspectItemIntent_Portrait:
+  - text: "Hades, der aus dem Fernseher. Unglaublich, dass er mich entführt hat. Ich hätte damit nie im Leben
+           gerechnet. Was sind das? Pfeile? Nach oben, nach unten, 2 mal nach oben und 2mal nach unten. hm."
+
+  utter_InspectItemIntent_Switch:
+  - text: "Ein Schalter an der Wand. Hm. Was öffnet er wohl?"
+
+  utter_InspectItemIntent_Table:
+  - text: "Hades, der aus dem Fernseher. Unglaublich, dass er mich entführt hat. Ich hätte damit nie im Leben
+           gerechnet. Was sind das? Pfeile? Nach oben, nach unten, 2 mal nach oben und 2mal nach unten. hm."
+
+  utter_InspectItemIntent_Safe:
+  - text: ""
+
+  utter_InspectItemIntent_Door:
+  - text: ""
+
+  utter_InspectItemIntent_NotHelpfull:
+  - text: "Hm. Es ist nichts, was ich nutzen kann."
+
+  utter_SwitchSolutionIntent_Done:
+  - text: "Der Safe scheint sich geöffnet zu haben!"
+
+  utter_SwitchSolutionIntent_NotDone:
+  - text: "Ich muss noch etwas an den Schaltern machen."
+
+  utter_OpenTheDoorIntent_PwdRight:
+  - text: "Ich habs geschafft! Ich bin raus!"
+
+  utter_OpenTheDoorIntent_PwdWrong:
+  - text: "Das Passwort ist falsch. Ich habe einen Fehler gemacht!"
+
+  utter_PlayerInnerVoiceIntent:
+  - text: "Dein Geschlecht wurde gespeichert. Jetzt kannst du das Spiel starten"
+
+  LoadGameHistoryIntent:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ContinueTheGameIntent_doorOpen:
+  - text: "Die Tür ist bereits offen, du kannst entkommen! Falls du mit dem selben Spielernamen 
+            und Geschlecht neu starten möchtest, sage Spiel resetten."
+
+  utter_ContinueTheGameIntent_safeOpen:
+  - text: "Du hast das letzte Mal sehr weit geschafft. Der Safe ist offen. Was ist da nur drin? Du hast noch  x Min."
+
+  utter_ContinueTheGameIntent_switchedRight:
+  - text: "Die Schalter an der Wand! Wozu sind sie? Du hast noch  xmin Zeit."
+
+  utter_ContinueTheGameIntent_flashlightFound:
+  - text: "Du hast bereits eine Lichtquelle gefunden. Die größte Hürde hast du hinter dir. 
+            Du hast noch x min Zeit. Viel Erfolg."
+
+  utter_ContinueTheGameIntent__onlyGenderChoosed:
+  - text: "Du steckst im dunklen Zimmer fest. Wo Schatten ist, ist auch Licht. Ach, oder war das umgekehrt?
+            Naja.. Du hast noch  xmin Zeit. Viel Erfolg"
+
+  utter_ContinueTheGameIntent__GenderNotChoosed:
+  - text: "Du musst zuerst ein Geschlecht auswählen, in das du hineinschlüpfen möchtest. Du hast 
+           weiblich oder männlich zur Auswahl. Wähle eins aus!"
+
+  utter_RemainingTimeIntent:
+  - text: "Du hast noch x Minuten Zeit"
+
+  utter_GiveMeHintIntent_LightFalse:
+  - text: "Was hatte ich denn an dem Tag der Entführung an? Habe ich etwas hilfreiches dabei?"
+
+  utter_GiveMeHintIntent_SwitchFalse:
+  - text: "Was sind das für Pfeile auf dem Porträt?"
+
+  utter_GiveMeHintIntent_SafeOpened:
+  - text: "Was ist in dem Safe drin? Ich muss hier raus!"
+
+  CancelIntent:
+  - text: "Auf Wiedersehen!"
+
+  utter_HelpIntent:
+  - text: "Falls du nicht mehr weiterkommst, kannst du nach Hinweise fragen."
+
+  utter_CancelOrStopIntent:
+  - text: "Auf Wiedersehen!"
+
+  utter_FallbackIntent:
+  - text: "Ich kann dir dabei leider nicht helfen. Falls du dir meine 
+            letzten Worte wieder anhören möchtest, sage: Wiederhole das Letzte"
+
+  RepeatIntent:
+  - text: ""
+
+  utter_PauseIntent:
+  - text: "Du hast den Skill pausiert. Dein Spielstand ist lokal gespeichert."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

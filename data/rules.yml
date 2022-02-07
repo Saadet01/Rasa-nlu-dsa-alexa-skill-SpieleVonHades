@@ -1,0 +1,29 @@
+version: "3.0"
+
+rules:
+
+- rule: Hilfe nach Verlangen
+  steps:
+  - intent: HelpIntent
+  - action: utter_HelpIntent
+
+- rule: Einführungserklärung nach Verlangen
+  steps:
+  - intent: IntroductionIntent
+  - action: utter_IntroductionIntent
+
+- rule: Pause nach Verlangen
+  steps:
+  - intent: PauseIntent
+  - action: utter_PauseIntent
+
+- rule: restliche Zeit nach Fragen
+  steps:
+  - intent: RemainingTimeIntent
+  - action: utter_RemainingTimeIntent
+
+- rule: Cancel
+  steps:
+  - intent: CancelIntent
+  - action: utter_CancelOrStopIntent
+
